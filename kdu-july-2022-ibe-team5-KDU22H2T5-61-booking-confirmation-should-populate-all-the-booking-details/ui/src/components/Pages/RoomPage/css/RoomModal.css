@@ -1,0 +1,329 @@
+#modalRoot {
+  display: block;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 13.8671875vh;
+}
+#modalRoot::-webkit-scrollbar {
+  visibility: hidden;
+}
+#modalRoot .modalContainer {
+  overflow-y: auto;
+  width: 89.3055555556vw;
+  margin-left: 5.3472222222vw;
+  margin-right: 5.3472222222vw;
+  margin-top: 26.46484375vh;
+}
+#modalRoot .modalContainer::-webkit-scrollbar {
+  visibility: inherit;
+}
+#modalRoot .modalContainer .modal .carousel {
+  height: 37.20703125vh;
+}
+#modalRoot .modalContainer .modal .carousel .carousel-root {
+  height: 100%;
+}
+#modalRoot .modalContainer .modal .carousel .carousel-root div[class=carousel] {
+  display: none;
+}
+#modalRoot .modalContainer .modal .carousel .carousel-root .carousel-slider {
+  width: 100%;
+  height: 100%;
+}
+#modalRoot .modalContainer .modal .carousel .carousel-root .carousel-slider .slider-wrapper.axis-horizontal {
+  height: 100%;
+}
+#modalRoot .modalContainer .modal .carousel .carousel-root .carousel-slider .slider-wrapper.axis-horizontal .slider.animated {
+  height: 100%;
+}
+#modalRoot .modalContainer .modal .carousel .carousel-root .carousel-slider .slider-wrapper.axis-horizontal .slider.animated li div {
+  height: 100%;
+}
+#modalRoot .modalContainer .modal .carousel .carousel-root .carousel-slider .slider-wrapper.axis-horizontal .slider.animated li div img {
+  max-height: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  min-width: 100%;
+}
+#modalRoot .modalContainer .modal .content {
+  padding-left: 8.1944444444vw;
+  padding-top: 3.61328125vh;
+  grid-template-columns: auto 38.2638888889vw;
+}
+#modalRoot .modalContainer .modal .content .left {
+  grid-template-columns: auto;
+  grid-template-rows: 1.7578125vh fit-content(100%) auto;
+}
+#modalRoot .modalContainer .modal .content .left .specs {
+  grid-template-rows: 100%;
+  grid-template-columns: 3.3076388889vw fit-content(100%) 4.2361111111vw;
+}
+#modalRoot .modalContainer .modal .content .left .specs .maxCapacity {
+  grid-template-rows: 100%;
+  grid-template-columns: 0.9215277778vw 1.875vw;
+  grid-column-gap: 0.5111111111vw;
+}
+#modalRoot .modalContainer .modal .content .left .specs .maxCapacity .icon {
+  height: 74.1111111111%;
+}
+#modalRoot .modalContainer .modal .content .left .specs .maxCapacity .icon img {
+  max-height: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  min-width: 100%;
+}
+#modalRoot .modalContainer .modal .content .left .specs .maxCapacity .maxCapacityText {
+  height: 83.3333333333%;
+  font-family: "lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.3671875vh;
+  line-height: 140%;
+  color: #5d5d5d;
+}
+#modalRoot .modalContainer .modal .content .left .specs .bedCapacity {
+  margin-left: 2.4770833333vw;
+  grid-template-rows: 100%;
+  grid-template-columns: 1.01875vw 8.5416666667vw;
+  grid-column-gap: 0.7409722222vw;
+}
+#modalRoot .modalContainer .modal .content .left .specs .bedCapacity .icon {
+  height: 62.9444444444%;
+}
+#modalRoot .modalContainer .modal .content .left .specs .bedCapacity .icon img {
+  max-height: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  min-width: 100%;
+}
+#modalRoot .modalContainer .modal .content .left .specs .bedCapacity .bedCapacityText {
+  height: 83.3333333333%;
+  font-family: "lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.3671875vh;
+  line-height: 140%;
+  color: #5d5d5d;
+}
+#modalRoot .modalContainer .modal .content .left .specs .area {
+  margin-left: 0.8333333333vw;
+  width: 100%;
+  height: 100%;
+  font-family: "lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5625vh;
+  line-height: 140%;
+  color: #5d5d5d;
+}
+#modalRoot .modalContainer .modal .content .left .description {
+  margin-top: 2.05078125vh;
+  width: 40.9722222222vw;
+  font-family: "lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5625vh;
+  line-height: 140%;
+  color: #000000;
+}
+#modalRoot .modalContainer .modal .content .left .promotions {
+  margin-top: 2.5390625vh;
+  grid-template-columns: auto;
+  grid-template-rows: 1.7578125vh auto;
+  grid-row-gap: 2.24609375vh;
+}
+#modalRoot .modalContainer .modal .content .left .dealsAndPackages {
+  margin-top: 3.125vh;
+  margin-bottom: 1.953125vh;
+  grid-template-columns: 100%;
+  grid-template-rows: 1.7578125vh fit-content(100%) fit-content(100%);
+}
+#modalRoot .modalContainer .modal .content .left .dealsAndPackages .categories {
+  margin-top: 1.85546875vh;
+  margin-bottom: 2.34375vh;
+  grid-template-rows: 3.41796875vh;
+  grid-template-columns: fit-content(100%) fit-content(100%);
+  grid-column-gap: 3.0555555556vw;
+}
+#modalRoot .modalContainer .modal .content .left .dealsAndPackages .categories .category {
+  font-family: "lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5625vh;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #26266d;
+}
+#modalRoot .modalContainer .modal .content .left .promotions .heading,
+#modalRoot .modalContainer .modal .content .left .dealsAndPackages .heading {
+  grid-template-rows: auto;
+  grid-template-columns: fit-content(100%);
+  font-family: "lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.953125vh;
+  line-height: 130%;
+  color: #000000;
+}
+#modalRoot .modalContainer .modal .content .left .promotions .deals,
+#modalRoot .modalContainer .modal .content .left .dealsAndPackages .deals {
+  grid-template-columns: auto;
+  grid-auto-rows: 12.6953125vh;
+  grid-row-gap: 1.5625vh;
+}
+#modalRoot .modalContainer .modal .content .left .promotions .deals .deal,
+#modalRoot .modalContainer .modal .content .left .dealsAndPackages .deals .deal {
+  grid-template-rows: 100%;
+  grid-template-columns: auto 13.8888888889vw;
+  border: 0.09765625vh solid #eff0f1;
+  box-shadow: 0vh 0.1953125vh 0.1953125vh rgba(0, 0, 0, 0.1);
+  border-radius: 0.48828125vh;
+}
+#modalRoot .modalContainer .modal .content .left .promotions .deals .deal .dealInfo,
+#modalRoot .modalContainer .modal .content .left .dealsAndPackages .deals .deal .dealInfo {
+  padding-left: 1.4583333333vw;
+  padding-bottom: 3.7109375vh;
+  padding-top: 2.5390625vh;
+  padding-right: 2.9166666667vw;
+  grid-template-columns: 100%;
+  grid-template-rows: 1.85546875vh fit-content(100%);
+  grid-row-gap: 1.171875vh;
+}
+#modalRoot .modalContainer .modal .content .left .promotions .deals .deal .dealInfo .dealTitle,
+#modalRoot .modalContainer .modal .content .left .dealsAndPackages .deals .deal .dealInfo .dealTitle {
+  padding-left: 0.1388888889vw;
+  font-family: "lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5625vh;
+  line-height: 150%;
+  color: #000000;
+}
+#modalRoot .modalContainer .modal .content .left .promotions .deals .deal .dealInfo .dealDescription,
+#modalRoot .modalContainer .modal .content .left .dealsAndPackages .deals .deal .dealInfo .dealDescription {
+  font-family: "lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5625vh;
+  line-height: 140%;
+  color: #5d5d5d;
+}
+#modalRoot .modalContainer .modal .content .left .promotions .deals .deal .dealRate,
+#modalRoot .modalContainer .modal .content .left .dealsAndPackages .deals .deal .dealRate {
+  background: #eff0f1;
+  border-radius: 0vh 0.48828125vh 0.48828125vh 0vh;
+  padding-top: 2.734375vh;
+  padding-bottom: 1.46484375vh;
+  padding-right: 2.1484375vh;
+  padding-left: 2.44140625vh;
+  grid-template-columns: auto;
+  grid-template-rows: auto 3.41796875vh;
+  grid-row-gap: 0.9765625vh;
+}
+#modalRoot .modalContainer .modal .content .left .promotions .deals .deal .dealRate .dealRateContainer,
+#modalRoot .modalContainer .modal .content .left .dealsAndPackages .deals .deal .dealRate .dealRateContainer {
+  grid-template-columns: fit-content(100%);
+  grid-template-rows: 2.34375vh 2.05078125vh;
+  grid-row-gap: 0.1953125vh;
+  justify-content: end;
+}
+#modalRoot .modalContainer .modal .content .left .promotions .deals .deal .dealRate .dealRateContainer .rate,
+#modalRoot .modalContainer .modal .content .left .dealsAndPackages .deals .deal .dealRate .dealRateContainer .rate {
+  font-family: "lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.34375vh;
+  line-height: 140%;
+  color: #000000;
+}
+#modalRoot .modalContainer .modal .content .left .promotions .deals .deal .dealRate .dealRateContainer .ratePerPerson,
+#modalRoot .modalContainer .modal .content .left .dealsAndPackages .deals .deal .dealRate .dealRateContainer .ratePerPerson {
+  align-self: end;
+  font-family: "lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.3671875vh;
+  line-height: 140%;
+  color: #858685;
+}
+#modalRoot .modalContainer .modal .content .left .promotions .deals .deal .dealRate .dealSelect,
+#modalRoot .modalContainer .modal .content .left .dealsAndPackages .deals .deal .dealRate .dealSelect {
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 1.171875vh 1.953125vh;
+  gap: 1.171875vh;
+  background: var(--primaryColor);
+  color: var(--backgroundColor);
+  border-radius: 0.390625vh;
+}
+#modalRoot .modalContainer .modal .content .left .promotions .deals .deal .dealRate .dealSelect a,
+#modalRoot .modalContainer .modal .content .left .dealsAndPackages .deals .deal .dealRate .dealSelect a {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+#modalRoot .modalContainer .modal .content .left .promotions .deals .deal .dealRate .dealSelect a button.dealSelectButton,
+#modalRoot .modalContainer .modal .content .left .dealsAndPackages .deals .deal .dealRate .dealSelect a button.dealSelectButton {
+  font-family: "lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.3671875vh;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  align-self: center;
+}
+#modalRoot .modalContainer .modal .content .right {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+#modalRoot .modalContainer .modal .content .right .amenitiesContainer {
+  padding-left: 4.1666666667vw;
+  grid-template-columns: 100%;
+  grid-template-rows: 2.24609375vh fit-content(100%);
+  grid-row-gap: 1.66015625vh;
+}
+#modalRoot .modalContainer .modal .content .right .amenitiesContainer .amenityHeader {
+  grid-template-rows: 100%;
+  grid-template-columns: fit-content(100%);
+  font-family: "lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5625vh;
+  line-height: 140%;
+  color: #000000;
+}
+#modalRoot .modalContainer .modal .content .right .amenitiesContainer .amenities {
+  grid-template-columns: fit-content(100%) fit-content(100%);
+  grid-auto-rows: fit-content(100%);
+  grid-row-gap: 0.5859375vh;
+  grid-column-gap: 1.3888888889vw;
+}
+#modalRoot .modalContainer .modal .content .right .amenitiesContainer .amenities .amenity {
+  grid-template-columns: 1.1111111111vw fit-content(100%);
+  grid-column-gap: 0.5555555556vw;
+  grid-template-rows: 100%;
+  align-items: center;
+  justify-content: start;
+}
+#modalRoot .modalContainer .modal .content .right .amenitiesContainer .amenities .amenity .amenityTickIcon {
+  grid-template-rows: 1.5625vh;
+  grid-template-columns: 100%;
+}
+#modalRoot .modalContainer .modal .content .right .amenitiesContainer .amenities .amenity .amenityTickIcon img {
+  max-height: 100%;
+  max-width: 100%;
+}
+#modalRoot .modalContainer .modal .content .right .amenitiesContainer .amenities .amenity .amenityTitle {
+  grid-template-columns: fit-content(100%);
+  grid-template-rows: 100%;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5625vh;
+  line-height: 140%;
+  color: #000000;
+}/*# sourceMappingURL=RoomModal.css.map */

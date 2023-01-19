@@ -1,0 +1,393 @@
+:root {
+//     --primaryColor: #26266d;
+//     --secondaryColor: #ffffff;
+//     --backgroundColor: #5d5d5d;
+//     --labelColor: #2f2f2f;
+//     --borderColor: #c1c2c2;
+//     // --background: url("../assets/londonBridge.jpg");
+//     // --background: url("https://ibe-t5-static.s3.amazonaws.com/londonBridge.jpg");
+//     --fontFamily: "lato";
+//     --dropdownMenuOpacity: 0;
+//     --dropdownMenuTransform: translateY(-10px);
+//     --dropdownMenuPointerEvents: none;
+//     --showGuests: visible;
+//     --showAccessible: visible;
+//     --showPromoCode: visible;
+    --detImg: url("https://daedayib1baqz.cloudfront.net/standard_suite_1.jpg");
+  }
+  
+  $screenWidth: 1440;
+  $screenHeight: 1024;
+  
+  @function px-to-vh($px) {
+    @return (($px / $screenHeight) * 100) * 1vh;
+  }
+  
+  @function px-to-vw($px) {
+    @return (($px / $screenWidth) * 100) * 1vw;
+  }
+  
+  @function em-to-vh($em) {
+    @return ((($em * 16) / $screenHeight) * 100) * 1vh;
+  }
+  
+  @function em-to-vw($em) {
+    @return ((($em * 16) / $screenWidth) * 100) * 1vw;
+  }
+  
+  @media print {
+    div {
+      #header{
+          .tenant{
+  
+              width: fit-content(100%);
+          }
+          .languageNav, .currencyNav{
+              display: none;
+          }
+      }
+  
+      div {
+        .Label {
+          margin-left: px-to-vw(165);
+          margin-top: px-to-vh(25);
+          margin-right: px-to-vw(165);
+          grid-template-columns: px-to-vw(990) px-to-vw(120) px-to-vw(120);
+  
+          .bookingLabel {
+            font-size: px-to-vw(24);
+            font-family: var(--fontFamily);
+            font-weight: 700;
+            height: px-to-vh(45);
+            width: px-to-vw(482);
+          }
+  
+          .printBtn {
+              display: none;
+            padding: px-to-vh(10);
+            color: blue;
+          }
+        }
+  
+        .checkOutInfo {
+          border: solid px-to-vh(1) gray;
+          margin-left: px-to-vw(163);
+          margin-right: px-to-vw(163);
+          border-radius: px-to-vw(5);
+          height: 100%;
+          width: fit-content;
+  
+          .roomInfo {
+            grid-template-columns: px-to-vw(913) px-to-vw(200);
+  
+            .roomDetails {
+              .detLabel {
+                font-size: px-to-vw(23);
+                font-family: var(--fontFamily);
+                font-weight: 700;
+                height: px-to-vh(45);
+                width: px-to-vw(482);
+                margin-left: px-to-vw(28);
+                margin-top: px-to-vh(28);
+                margin-bottom: px-to-vh(29);
+              }
+  
+              .detInfo {
+                grid-template-columns: px-to-vw(376) auto;
+  
+                .detInfo-Img {
+                  background-color: grey;
+                  height: px-to-vh(224);
+                  width: px-to-vw(328);
+                  margin-left: px-to-vw(26);
+                  margin-right: px-to-vw(22);
+                  background-image: var(--detImg);
+                  background-size: 100% 100%;
+                }
+  
+                .detInfo-desc {
+                  grid-template-rows: px-to-vh(113) auto;
+                  .dateBoxes {
+                    display: grid;
+                    grid-template-columns: px-to-vw(112) auto;
+  
+                    .dateBox {
+                      border: solid px-to-vh(1) gray;
+                      height: px-to-vh(106);
+                      width: px-to-vw(105);
+                      border-radius: px-to-vw(5);
+                      align-items: center;
+  
+                      .checkDate {
+                        color: grey;
+                        text-align: center;
+                      }
+  
+                      .date {
+                        text-align: center;
+                        font-family: var(--fontFamily);
+                        font-weight: 700;
+                      }
+  
+                      .year {
+                        text-align: center;
+                        font-family: var(--fontFamily);
+                        font-weight: 400;
+                      }
+                    }
+                  }
+  
+                  .infoBox {
+                    height: px-to-vh(132);
+                    width: px-to-vw(441);
+  
+                    .infoBox-label {
+                      font-size: px-to-vw(20);
+                      font-family: var(--fontFamily);
+                      font-weight: 700;
+                      height: px-to-vh(37);
+                      width: fit-content;
+                    }
+  
+                    .infoBox-content {
+                      color: grey;
+                      font-size: px-to-vw(16);
+                      font-family: var(--fontFamily);
+                      font-weight: 400;
+                    }
+                  }
+                }
+              }
+            }
+  
+            .sideBtns {
+              // visibility: hidden;
+              display: none;
+              margin-right: px-to-vw(14);
+              margin-left: auto;
+              margin-top: px-to-vh(29);
+              .roomBtn {
+                border: solid px-to-vh(1) black;
+                background-color: var(--primaryColor);
+                color: white;
+                padding: auto;
+                border-radius: px-to-vh(5);
+                height: px-to-vh(60);
+                width: px-to-vw(150);
+              }
+  
+              .cancelBtn {
+                color: blue;
+              }
+            }
+          }
+  
+          .accordian-label {
+            color: var(--primaryColor);
+            font-family: var(--fontFamily);
+            font-weight: 700;
+            font-size: px-to-vw(16);
+            margin-left: px-to-vw(44);
+          }
+  
+          .accordian {
+            grid-template-columns: px-to-vw(950) px-to-vw(150);
+  
+            .accordian-details {
+              margin-left: px-to-vw(64);
+              span {
+                color: gray;
+                font-family: var(--fontFamily);
+                font-weight: 400;
+                font-size: px-to-vw(16);
+              }
+            }
+  
+            .accordian-value {
+              span {
+                font-family: var(--fontFamily);
+                font-weight: 400;
+                font-size: px-to-vw(20);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  #CheckOut {
+    overflow-y: scroll;
+    // &::-webkit-scrollbar {
+    //   width: 0 !important;
+    // }
+    height: 100vh;
+  
+    div {
+      div {
+        .Label {
+          margin-left: px-to-vw(165);
+          margin-top: px-to-vh(5);
+          margin-bottom: px-to-vh(13);
+          margin-right: px-to-vw(165);
+          grid-template-columns: px-to-vw(990) px-to-vw(120) px-to-vw(120);
+  
+          .bookingLabel {
+            font-size: px-to-vw(24);
+            font-family: var(--fontFamily);
+            font-weight: 700;
+            height: px-to-vh(45);
+            width: px-to-vw(482);
+          }
+  
+          .printBtn {
+            padding: px-to-vh(10);
+            color: blue;
+          }
+        }
+  
+        .checkOutInfo {
+          border: solid px-to-vh(1) gray;
+          margin-left: px-to-vw(163);
+          margin-right: px-to-vw(163);
+          border-radius: px-to-vw(5);
+          height: 100%;
+          width: fit-content;
+  
+          .roomInfo {
+            grid-template-columns: px-to-vw(913) px-to-vw(200);
+  
+            .roomDetails {
+              .detLabel {
+                font-size: px-to-vw(23);
+                font-family: var(--fontFamily);
+                font-weight: 700;
+                height: px-to-vh(45);
+                width: px-to-vw(482);
+                margin-left: px-to-vw(28);
+                margin-top: px-to-vh(28);
+                margin-bottom: px-to-vh(29);
+              }
+  
+              .detInfo {
+                grid-template-columns: px-to-vw(376) auto;
+  
+                .detInfo-Img {
+                  background-color: grey;
+                  height: px-to-vh(224);
+                  width: px-to-vw(328);
+                  margin-left: px-to-vw(26);
+                  margin-right: px-to-vw(22);
+                  background-image: var(--detImg);
+                  background-size: 100% 100%;
+                }
+  
+                .detInfo-desc {
+                  grid-template-rows: px-to-vh(113) auto;
+                  .dateBoxes {
+                    display: grid;
+                    grid-template-columns: px-to-vw(112) auto;
+  
+                    .dateBox {
+                      border: solid px-to-vh(1) gray;
+                      height: px-to-vh(106);
+                      width: px-to-vw(105);
+                      border-radius: px-to-vw(5);
+                      align-items: center;
+  
+                      .checkDate {
+                        color: grey;
+                        text-align: center;
+                      }
+  
+                      .date {
+                        text-align: center;
+                        font-family: var(--fontFamily);
+                        font-weight: 700;
+                      }
+  
+                      .year {
+                        text-align: center;
+                        font-family: var(--fontFamily);
+                        font-weight: 400;
+                      }
+                    }
+                  }
+  
+                  .infoBox {
+                    height: px-to-vh(132);
+                    width: px-to-vw(441);
+  
+                    .infoBox-label {
+                      font-size: px-to-vw(20);
+                      font-family: var(--fontFamily);
+                      font-weight: 700;
+                      height: px-to-vh(37);
+                      width: fit-content;
+                    }
+  
+                    .infoBox-content {
+                      color: grey;
+                      font-size: px-to-vw(16);
+                      font-family: var(--fontFamily);
+                      font-weight: 400;
+                    }
+                  }
+                }
+              }
+            }
+  
+            .sideBtns {
+              margin-right: px-to-vw(14);
+              margin-left: auto;
+              margin-top: px-to-vh(29);
+              .roomBtn {
+                border: solid px-to-vh(1) black;
+                background-color: var(--primaryColor);
+                color: white;
+                padding: auto;
+                border-radius: px-to-vh(5);
+                height: px-to-vh(60);
+                width: px-to-vw(150);
+              }
+  
+              .cancelBtn {
+                color: blue;
+              }
+            }
+          }
+  
+          .accordian-label {
+            color: var(--primaryColor);
+            font-family: var(--fontFamily);
+            font-weight: 700;
+            font-size: px-to-vw(16);
+            margin-left: px-to-vw(44);
+          }
+  
+          .accordian {
+            grid-template-columns: px-to-vw(850) auto;
+  
+            .accordian-details {
+              margin-left: px-to-vw(64);
+              span {
+                color: gray;
+                font-family: var(--fontFamily);
+                font-weight: 400;
+                font-size: px-to-vw(16);
+              }
+            }
+  
+            .accordian-value {
+              span {
+                font-family: var(--fontFamily);
+                font-weight: 400;
+                font-size: px-to-vw(20);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  

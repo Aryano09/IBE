@@ -1,0 +1,505 @@
+$screenWidth: 1440;
+$screenHeight: 1024;
+$modalSpecsTextColor: #5d5d5d;
+$modalDescriptionTextColor: #000000;
+
+@function px-to-vh($px) {
+  @return (($px / $screenHeight) * 100) * 1vh;
+}
+
+@function px-to-vw($px) {
+  @return (($px / $screenWidth) * 100) * 1vw;
+}
+
+#modalRoot {
+  // height:10000px;
+  display: block;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: px-to-vh(142);
+
+  &::-webkit-scrollbar {
+    visibility: hidden;
+  }
+
+  .modalContainer {
+    overflow-y: auto;
+    width: px-to-vw(1286);
+    // width: px-to-vw(1138);
+    margin-left: px-to-vw(77);
+    margin-right: px-to-vw(77);
+    margin-top: px-to-vh(271);
+
+    &::-webkit-scrollbar {
+      visibility: inherit;
+    }
+
+    .modal {
+      .carousel {
+        height: px-to-vh(381);
+
+        .carousel-root {
+          height: 100%;
+          div[class="carousel"] {
+            display: none;
+          }
+          .carousel-slider {
+            width: 100%;
+            height: 100%;
+            .slider-wrapper.axis-horizontal {
+              height: 100%;
+              .slider.animated {
+                height: 100%;
+
+                li div {
+                  height: 100%;
+
+                  img {
+                    max-height: 100%;
+                    min-height: 100%;
+                    max-width: 100%;
+                    min-width: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .content {
+        padding-left: px-to-vw(118);
+        padding-top: px-to-vh(37);
+        grid-template-columns: auto px-to-vw(551);
+
+        .left {
+          grid-template-columns: auto;
+          // grid-template-rows: px-to-vh(18) px-to-vh(98) auto;
+          grid-template-rows: px-to-vh(18) fit-content(100%) auto;
+
+          .specs {
+            grid-template-rows: 100%;
+            // grid-template-columns: px-to-vw(47.63) px-to-vw(148.34) px-to-vw(61);
+            grid-template-columns: px-to-vw(47.63) fit-content(100%) px-to-vw(
+                61
+              );
+
+            .maxCapacity {
+              grid-template-rows: 100%;
+              grid-template-columns: px-to-vw(13.27) px-to-vw(27);
+              grid-column-gap: px-to-vw(7.36);
+
+              .icon {
+                height: 74.11111111111111%;
+                // width: 100%;
+
+                img {
+                  max-height: 100%;
+                  min-height: 100%;
+                  max-width: 100%;
+                  min-width: 100%;
+                }
+              }
+
+              .maxCapacityText {
+                height: 83.33333333333333%;
+                // width: 100%;
+
+                font-family: "lato";
+                font-style: normal;
+                font-weight: 400;
+                font-size: px-to-vh(14);
+                line-height: 140%;
+                color: $modalSpecsTextColor;
+              }
+            }
+
+            .bedCapacity {
+              margin-left: px-to-vw(35.67);
+              grid-template-rows: 100%;
+              grid-template-columns: px-to-vw(14.67) px-to-vw(123);
+              //   grid-template-columns: px-to-vw(14.67) max-content;
+              grid-column-gap: px-to-vw(10.67);
+
+              .icon {
+                height: 62.94444444444444%;
+                // width: 100%;
+
+                img {
+                  max-height: 100%;
+                  min-height: 100%;
+                  max-width: 100%;
+                  min-width: 100%;
+                }
+              }
+
+              .bedCapacityText {
+                height: 83.33333333333333%;
+                // width: 100%;
+
+                font-family: "lato";
+                font-style: normal;
+                font-weight: 400;
+                font-size: px-to-vh(14);
+                line-height: 140%;
+                color: $modalSpecsTextColor;
+              }
+            }
+
+            .area {
+              margin-left: px-to-vw(12);
+              width: 100%;
+              height: 100%;
+              font-family: "lato";
+              font-style: normal;
+              font-weight: 400;
+              font-size: px-to-vh(16);
+              line-height: 140%;
+              color: $modalSpecsTextColor;
+            }
+          }
+
+          .description {
+            margin-top: px-to-vh(21);
+            width: px-to-vw(590);
+            font-family: "lato";
+            font-style: normal;
+            font-weight: 400;
+            font-size: px-to-vh(16);
+            line-height: 140%;
+            color: $modalDescriptionTextColor;
+          }
+
+          .promotions {
+            margin-top: px-to-vh(26);
+            grid-template-columns: auto;
+            grid-template-rows: px-to-vh(18) auto;
+            grid-row-gap: px-to-vh(23);
+
+            // .heading {
+            //   grid-template-rows: auto;
+            //   grid-template-columns: fit-content(100%);
+            //   font-family: "lato";
+            //   font-style: normal;
+            //   font-weight: 600;
+            //   font-size: px-to-vh(20);
+            //   line-height: 130%;
+            //   color: #000000;
+            // }
+
+            // .deals {
+            //   grid-template-columns: auto;
+            //   grid-auto-rows: px-to-vh(130);
+            //   grid-row-gap: px-to-vh(16);
+
+            //   .deal {
+            //     grid-template-rows: 100%;
+            //     grid-template-columns: auto px-to-vw(200);
+            //     border: px-to-vh(1) solid #eff0f1;
+            //     box-shadow: px-to-vh(0) px-to-vh(2) px-to-vh(2)
+            //       rgba(0, 0, 0, 0.1);
+            //     border-radius: px-to-vh(5);
+
+            //     .dealInfo {
+            //       padding-left: px-to-vw(21);
+            //       padding-bottom: px-to-vh(38);
+            //       padding-top: px-to-vh(26);
+            //       padding-right: px-to-vw(42);
+            //       grid-template-columns: 100%;
+            //       grid-template-rows: px-to-vh(19) fit-content(100%);
+            //       grid-row-gap: px-to-vh(12);
+
+            //       .dealTitle {
+            //         padding-left: px-to-vw(2);
+            //         font-family: "lato";
+            //         font-style: normal;
+            //         font-weight: 700;
+            //         font-size: px-to-vh(16);
+            //         line-height: 150%;
+            //         color: #000000;
+            //       }
+
+            //       .dealDescription {
+            //         font-family: "lato";
+            //         font-style: normal;
+            //         font-weight: 400;
+            //         font-size: px-to-vh(16);
+            //         line-height: 140%;
+            //         color: #5d5d5d;
+            //       }
+            //     }
+
+            //     .dealRate {
+            //       background: #eff0f1;
+            //       border-radius: px-to-vh(0) px-to-vh(5) px-to-vh(5) px-to-vh(0);
+            //       padding-top: px-to-vh(28);
+            //       padding-bottom: px-to-vh(15);
+            //       padding-right: px-to-vh(22);
+            //       padding-left: px-to-vh(25);
+            //       grid-template-columns: auto;
+            //       grid-template-rows: auto px-to-vh(35);
+            //       grid-row-gap: px-to-vh(10);
+
+            //       .dealRateContainer {
+            //         grid-template-columns: fit-content(100%);
+            //         grid-template-rows: px-to-vh(24) px-to-vh(21);
+            //         grid-row-gap: px-to-vh(2);
+            //         justify-content: end;
+
+            //         .rate {
+            //           font-family: "lato";
+            //           font-style: normal;
+            //           font-weight: 700;
+            //           font-size: px-to-vh(24);
+            //           line-height: 140%;
+            //           color: #000000;
+            //         }
+
+            //         .ratePerPerson {
+            //           align-self: end;
+            //           font-family: "lato";
+            //           font-style: normal;
+            //           font-weight: 400;
+            //           font-size: px-to-vh(14);
+            //           line-height: 140%;
+            //           color: #858685;
+            //         }
+            //       }
+
+            //       .dealSelect {
+            //         grid-template-columns: 100%;
+            //         grid-template-rows: 100%;
+            //         justify-content: center;
+            //         align-items: center;
+            //         padding: px-to-vh(12) px-to-vh(20);
+            //         gap: px-to-vh(12);
+            //         background: #26266d;
+            //         border-radius: px-to-vh(4);
+
+            //         .dealSelectButton {
+            //           font-family: "lato";
+            //           font-style: normal;
+            //           font-weight: 700;
+            //           font-size: px-to-vh(14);
+            //           line-height: 140%;
+            //           letter-spacing: 0.02em;
+            //           text-transform: uppercase;
+            //           align-self: center;
+            //         }
+            //       }
+            //     }
+            //   }
+            // }
+          }
+
+          .dealsAndPackages {
+            margin-top: px-to-vh(32);
+            margin-bottom: px-to-vh(20);
+            grid-template-columns: 100%;
+            grid-template-rows: px-to-vh(18) fit-content(100%) fit-content(100%);
+
+            .categories {
+              margin-top: px-to-vh(19);
+              margin-bottom: px-to-vh(24);
+              grid-template-rows: px-to-vh(35);
+              grid-template-columns: fit-content(100%) fit-content(100%);
+              grid-column-gap: px-to-vw(44);
+
+              .category {
+                font-family: "lato";
+                font-style: normal;
+                font-weight: 700;
+                font-size: px-to-vh(16);
+                line-height: 150%;
+                text-transform: uppercase;
+                color: #26266d;
+              }
+            }
+          }
+
+          .promotions,
+          .dealsAndPackages {
+            .heading {
+              grid-template-rows: auto;
+              grid-template-columns: fit-content(100%);
+              font-family: "lato";
+              font-style: normal;
+              font-weight: 600;
+              font-size: px-to-vh(20);
+              line-height: 130%;
+              color: #000000;
+            }
+
+            .deals {
+              grid-template-columns: auto;
+              grid-auto-rows: px-to-vh(130);
+              grid-row-gap: px-to-vh(16);
+
+              .deal {
+                grid-template-rows: 100%;
+                grid-template-columns: auto px-to-vw(200);
+                border: px-to-vh(1) solid #eff0f1;
+                box-shadow: px-to-vh(0) px-to-vh(2) px-to-vh(2)
+                  rgba(0, 0, 0, 0.1);
+                border-radius: px-to-vh(5);
+
+                .dealInfo {
+                  padding-left: px-to-vw(21);
+                  padding-bottom: px-to-vh(38);
+                  padding-top: px-to-vh(26);
+                  padding-right: px-to-vw(42);
+                  grid-template-columns: 100%;
+                  grid-template-rows: px-to-vh(19) fit-content(100%);
+                  grid-row-gap: px-to-vh(12);
+
+                  .dealTitle {
+                    padding-left: px-to-vw(2);
+                    font-family: "lato";
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: px-to-vh(16);
+                    line-height: 150%;
+                    color: #000000;
+                  }
+
+                  .dealDescription {
+                    font-family: "lato";
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: px-to-vh(16);
+                    line-height: 140%;
+                    color: #5d5d5d;
+                  }
+                }
+
+                .dealRate {
+                  background: #eff0f1;
+                  border-radius: px-to-vh(0) px-to-vh(5) px-to-vh(5) px-to-vh(0);
+                  padding-top: px-to-vh(28);
+                  padding-bottom: px-to-vh(15);
+                  padding-right: px-to-vh(22);
+                  padding-left: px-to-vh(25);
+                  grid-template-columns: auto;
+                  grid-template-rows: auto px-to-vh(35);
+                  grid-row-gap: px-to-vh(10);
+
+                  .dealRateContainer {
+                    grid-template-columns: fit-content(100%);
+                    grid-template-rows: px-to-vh(24) px-to-vh(21);
+                    grid-row-gap: px-to-vh(2);
+                    justify-content: end;
+
+                    .rate {
+                      font-family: "lato";
+                      font-style: normal;
+                      font-weight: 700;
+                      font-size: px-to-vh(24);
+                      line-height: 140%;
+                      color: #000000;
+                    }
+
+                    .ratePerPerson {
+                      align-self: end;
+                      font-family: "lato";
+                      font-style: normal;
+                      font-weight: 400;
+                      font-size: px-to-vh(14);
+                      line-height: 140%;
+                      color: #858685;
+                    }
+                  }
+
+                  .dealSelect {
+                    grid-template-columns: 100%;
+                    grid-template-rows: 100%;
+                    justify-content: center;
+                    align-items: center;
+                    padding: px-to-vh(12) px-to-vh(20);
+                    gap: px-to-vh(12);
+                    // background: #26266d;
+                    background: var(--primaryColor);
+                    color: var(--backgroundColor);
+                    border-radius: px-to-vh(4);
+
+                    a {
+                      display: grid;
+                      justify-content: center;
+                      align-items: center;
+
+                      button.dealSelectButton {
+                        font-family: "lato";
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: px-to-vh(14);
+                        line-height: 140%;
+                        letter-spacing: 0.02em;
+                        text-transform: uppercase;
+                        align-self: center;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .right {
+          height: fit-content;
+
+          .amenitiesContainer {
+            padding-left: px-to-vw(60);
+            grid-template-columns: 100%;
+            grid-template-rows: px-to-vh(23) fit-content(100%);
+            grid-row-gap: px-to-vh(17);
+
+            .amenityHeader {
+              grid-template-rows: 100%;
+              grid-template-columns: fit-content(100%);
+              font-family: "lato";
+              font-style: normal;
+              font-weight: 400;
+              font-size: px-to-vh(16);
+              line-height: 140%;
+              color: #000000;
+            }
+
+            .amenities {
+              grid-template-columns: fit-content(100%) fit-content(100%);
+              grid-auto-rows: fit-content(100%);
+              grid-row-gap: px-to-vh(6);
+              grid-column-gap: px-to-vw(20);
+
+              .amenity {
+                grid-template-columns: px-to-vw(16) fit-content(100%);
+                grid-column-gap: px-to-vw(8);
+                grid-template-rows: 100%;
+                align-items: center;
+                justify-content: start;
+                .amenityTickIcon {
+                  grid-template-rows: px-to-vh(16);
+                  grid-template-columns: 100%;
+
+                  img {
+                    max-height: 100%;
+                    max-width: 100%;
+                  }
+                }
+
+                .amenityTitle {
+                  grid-template-columns: fit-content(100%);
+                  grid-template-rows: 100%;
+                  font-family: "Lato";
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: px-to-vh(16);
+                  line-height: 140%;
+                  color: #000000;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

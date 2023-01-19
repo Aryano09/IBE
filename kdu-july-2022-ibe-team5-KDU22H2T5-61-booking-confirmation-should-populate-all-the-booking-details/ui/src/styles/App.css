@@ -1,0 +1,406 @@
+:root {
+  --primaryColor: #26266d;
+  --secondaryColor: #ffffff;
+  --backgroundColor: #ffffff;
+  --labelColor: #2f2f2f;
+  --borderColor: #c1c2c2;
+  --background: url("https://daedayib1baqz.cloudfront.net/sunnyBackground.jpg");
+  --fontFamily: "lato";
+  --dropdownMenuOpacity: 0;
+  --dropdownMenuTransform: translateY(-10px);
+  --dropdownMenuPointerEvents: none;
+  --showGuests: visible;
+  --showAccessible: visible;
+  --showPromoCode: none;
+}
+
+.hidden {
+  display: none;
+}
+
+html {
+  overflow: hidden;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownMenu {
+  grid-auto-rows: 1fr;
+  position: absolute;
+  background-color: var(--backgroundColor);
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.1953125vh 0.48828125vh 0 rgba(0, 0, 0, 0.5);
+  opacity: var(--dropdownMenuOpacity);
+  transform: var(--dropdownMenuTransform);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  width: 20.277777778vw;
+}
+
+.dropdown.active > button + .dropdownMenu {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 52;
+}
+
+#header > a > button,
+#loginPageRoot > #header > a > button {
+  color: var(--primaryColor);
+  background-color: var(--backgroundColor);
+  font-weight: 600;
+}
+
+#header > li.cursor-pointer.justify-self-end.grid.grid-rows-1 > div,
+#loginPageRoot > #header > li.cursor-pointer.justify-self-end.grid.grid-rows-1 > div {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+#header,
+#loginPageRoot > #header {
+  grid-template-columns: 50% auto fit-content(100%) fit-content(100%);
+  padding-left: 5.902777778vw;
+  padding-right: 5.902777778vw;
+  height: 8.203125vh;
+  color: var(--primaryColor);
+  font-family: var(--fontFamily);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5625vh;
+  line-height: 140%;
+  grid-column-gap: 1.0416666667vw;
+  background: white;
+}
+#header .tenant,
+#loginPageRoot > #header .tenant {
+  grid-template-columns: auto -webkit-max-content;
+  grid-template-columns: auto max-content;
+  grid-column-gap: 0.344444444vw;
+}
+#header .tenant .tenantName,
+#loginPageRoot > #header .tenant .tenantName {
+  font-size: 2.9296875vh;
+}
+#header .tenant .headerName,
+#loginPageRoot > #header .tenant .headerName {
+  font-family: var(--fontFamily);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.953125vh;
+  color: var(--primaryColor);
+}
+#header .currencyNav,
+#loginPageRoot > #header .currencyNav {
+  display: grid;
+  align-items: center;
+}
+#header .currencyNav .currencyIcon,
+#loginPageRoot > #header .currencyNav .currencyIcon {
+  margin-top: 2.9619140625vh;
+  margin-bottom: 3.9384765625vh;
+  height: 1.26953125vh;
+}
+#header .currencyNav .currencyIcon img,
+#loginPageRoot > #header .currencyNav .currencyIcon img {
+  width: 100%;
+  height: 100%;
+}
+#header .currencyNav .currencyLabel,
+#loginPageRoot > #header .currencyNav .currencyLabel {
+  margin-top: 2.5390625vh;
+  margin-bottom: 3.7109375vh;
+  height: 1.953125vh;
+}
+#header .languageNav,
+#loginPageRoot > #header .languageNav {
+  display: grid;
+  align-items: center;
+}
+#header .languageNav .languageIcon,
+#loginPageRoot > #header .languageNav .languageIcon {
+  margin-top: 2.9619140625vh;
+  margin-bottom: 3.9384765625vh;
+  height: 1.3017578125vh;
+}
+#header .languageNav .languageIcon img,
+#loginPageRoot > #header .languageNav .languageIcon img {
+  width: 100%;
+  height: 100%;
+}
+#header .languageNav .languageLabel,
+#loginPageRoot > #header .languageNav .languageLabel {
+  margin-top: 2.5390625vh;
+  margin-bottom: 3.80859375vh;
+  height: 1.85546875vh;
+}
+#header a,
+#loginPageRoot > #header a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: grid;
+  align-items: center;
+}
+
+main {
+  height: 66.30859375vh;
+  height: 100vh;
+  background-image: var(--background);
+  background-size: 100vw 91.796875vh;
+}
+main .mainSearch {
+  height: 42.128906vh;
+  width: 26.388888889vw;
+  margin-top: 5.46875vh;
+  margin-left: 5.416666667vw;
+  border-radius: 0.48828125vh;
+  background: var(--backgroundColor);
+}
+main .mainSearch .mainSearchForm {
+  margin-top: 4.4921875vh;
+  margin-left: 2.986111111vw;
+  margin-right: 3.055555556vw;
+  grid-template-rows: 2.44140625vh 4.6875vh 3.61328125vh 4.6875vh 3.7109375vh 5.338867187vh 4.1015625vh 2.63671875vh auto;
+}
+main .mainSearch .mainSearchForm a {
+  z-index: 50;
+}
+main .mainSearch .mainSearchForm #propertyInputLabel {
+  height: 2.05078125vh;
+  width: 6.388888889vw;
+  margin-bottom: 0.48828125vh;
+  font-family: var(--fontFamily);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.3671875vh;
+  line-height: 140%;
+  color: var(--labelColor);
+}
+main .mainSearch .mainSearchForm #propertyInput {
+  margin-left: 0.069444444vw;
+  margin-bottom: 1.07421875vh;
+  height: 4.6875vh;
+  width: 20.277777778vw;
+  padding: 1.171875vh 1.5625vh;
+  gap: 1.5625vh;
+  background: var(--backgroundColor);
+  border: 0.09765625vh solid var(--borderColor);
+  border-radius: 0.390625vh;
+  font-family: var(--fontFamily);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5625vh;
+  line-height: 140%;
+  color: var(--labelColor);
+}
+main .mainSearch .mainSearchForm #selectDatesLabel {
+  margin-top: 1.07421875vh;
+  margin-left: 0.069444444vw;
+  height: 2.05078125vh;
+  width: 6.388888889vw;
+  font-family: var(--fontFamily);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.3671875vh;
+  line-height: 140%;
+  color: var(--labelColor);
+}
+main .mainSearch .mainSearchForm #selectDatesInput {
+  width: 20.277777778vw;
+  height: 4.6875vh;
+  padding: 1.171875vh 1.5625vh;
+  gap: 1.5625vh;
+  background: var(--backgroundColor);
+  border: 0.09765625vh solid var(--borderColor);
+  border-radius: 0.390625vh;
+}
+main .mainSearch .mainSearchForm .date-Range-Picker {
+  z-index: 1000;
+  opacity: 1;
+  background-color: white;
+  position: relative;
+}
+main .mainSearch .mainSearchForm .date-Range-Picker .rdrDay {
+  font-size: 0.6944444444vw;
+  height: 5.859375vh;
+  font-weight: 600;
+  color: green;
+}
+main .mainSearch .mainSearchForm .date-Range-Picker .rdrDefinedRangesWrapper {
+  display: none;
+}
+main .mainSearch .mainSearchForm .date-Range-Picker .rdrCalenderWrapper {
+  font-size: 1.953125vh;
+}
+main .mainSearch .mainSearchForm .date-Range-Picker .rdrDateDisplayItem {
+  border-radius: 0.390625vh;
+  box-shadow: 0 0.09765625vh 0.1953125vh 0 rgba(35, 57, 66, 0.21);
+  border: 0.1953125vh solid transparent;
+}
+main .mainSearch .mainSearchForm .date-Range-Picker .rdrMonthAndYearWrapper {
+  align-items: center;
+  height: 5.859375vh;
+  padding-top: 0.9765625vh;
+}
+main .mainSearch .mainSearchForm .date-Range-Picker .rdrNextPrevButton {
+  width: 1.6666666667vw;
+  height: 2.34375vh;
+  border-radius: 0.48828125vh;
+}
+main .mainSearch .mainSearchForm .date-Range-Picker .rdrMonthAndYearPickers select {
+  padding: 0.6944444444vw 2.0833333333vw 0.9765625vh 0.9765625vh;
+  border-radius: 0.390625vh;
+}
+main .mainSearch .mainSearchForm .roomGuestsLabels {
+  margin-top: 1.26953125vh;
+  margin-left: 0.069444444vw;
+  height: 2.05078125vh;
+  font-family: var(--fontFamily);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.3671875vh;
+  line-height: 140%;
+  color: var(--labelColor);
+  grid-template-columns: 6.388888889vw 6.388888889vw;
+  grid-column-gap: 8.75vw;
+}
+main .mainSearch .mainSearchForm .roomGuestsLabels #guestsInputLabel {
+  visibility: var(--showGuests);
+  width: 6.388888889vw;
+  height: 2.05078125vh;
+}
+main .mainSearch .mainSearchForm .roomGuestsLabels #roomsInputLabel {
+  width: 6.388888889vw;
+  height: 2.05078125vh;
+}
+main .mainSearch .mainSearchForm .roomGuestsInput {
+  height: 4.6875vh;
+  grid-template-columns: 13.888888889vw 5.347222222vw;
+  grid-column-gap: 1.041666667vw;
+}
+main .mainSearch .mainSearchForm .roomGuestsInput #guestsInputLanding {
+  visibility: var(--showGuests);
+  height: 100%;
+  width: 100%;
+  padding: 1.171875vh 1.5625vh;
+  gap: 1.5625vh;
+  background: var(--backgroundColor);
+  border: 0.09765625vh solid var(--borderColor);
+  border-radius: 0.390625vh;
+  grid-template-columns: -webkit-max-content auto;
+  grid-template-columns: max-content auto;
+}
+main .mainSearch .mainSearchForm .roomGuestsInput #roomsInput {
+  padding: 1.171875vh 1.5625vh;
+  gap: 1.5625vh;
+  background: var(--backgroundColor);
+  border: 0.09765625vh solid var(--borderColor);
+  border-radius: 0.390625vh;
+}
+main .mainSearch .mainSearchForm .accessibleInputGrid {
+  visibility: var(--showAccessible);
+  margin-left: 0.138888889vw;
+  grid-template-columns: 1.111111111vw 1.0875vw 11.411805556vw;
+  z-index: 0;
+}
+main .mainSearch .mainSearchForm .accessibleInputGrid #accessibleInput {
+  height: 1.5625vh;
+  width: 1.111111111vw;
+  border: 0.09765625vh solid var(--borderColor);
+  border-radius: 0.09765625vh;
+}
+main .mainSearch .mainSearchForm .accessibleInputGrid #accessibleIcon {
+  height: 1.301757813vh;
+  width: 0.786805556vw;
+  margin-left: 0.300694444vw;
+}
+main .mainSearch .mainSearchForm .accessibleInputGrid #accessibleInputLabel {
+  height: 1.953125vh;
+  width: 11.180555556vw;
+  margin-left: 0.23125vw;
+  font-family: var(--fontFamily);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.3671875vh;
+  line-height: 140%;
+  color: var(--labelColor);
+}
+main .mainSearch .mainSearchForm #promoCodeLabel {
+  display: var(--showPromoCode);
+  margin-left: 0.069444444vw;
+  height: 2.05078125vh;
+  width: 15.416666667vw;
+  font-family: var(--fontFamily);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.3671875vh;
+  line-height: 140%;
+  color: var(--labelColor);
+}
+main .mainSearch .mainSearchForm #promoCodeInput {
+  display: var(--showPromoCode);
+  height: 4.6875vh;
+  width: 13.958333333vw;
+  border: 0.09765625vh solid var(--borderColor);
+  border-radius: 0.390625vh;
+  z-index: 0;
+}
+main .mainSearch .mainSearchForm #searchButton {
+  box-sizing: border-box;
+  margin-left: 5.277777778vw;
+  height: 4.296875vh;
+  width: 9.722222222vw;
+  padding: 1.171875vh 1.953125vh;
+  gap: 1.171875vh;
+  background: var(--primaryColor);
+  border-radius: 0.390625vh;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.3671875vh;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--backgroundColor);
+}
+
+#loginPageRoot {
+  height: 100vh;
+  width: 100vw;
+  background-image: var(--background);
+  background-size: 100vw 100vh;
+}
+#loginPageRoot .loginPageContainer {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+#loginPageRoot .loginPageContainer .loginBox {
+  background: var(--backgroundColor);
+  display: grid;
+  justify-content: center;
+  grid-auto-rows: -webkit-min-content;
+  grid-auto-rows: min-content;
+  grid-row-gap: 25px;
+  padding: 2.9296875vh 3.4722222222vw;
+  border-radius: 0.68359375vh;
+}
+#loginPageRoot .loginPageContainer .loginBox a {
+  text-align: center;
+}
+
+#errorPageRoot {
+  height: 100vh;
+}
+#errorPageRoot .errorContainer {
+  background: var(--background);
+  height: 100%;
+  text-align: center;
+  color: black;
+  font-family: "Material Symbols Outlined";
+  font-size: xx-large;
+}/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,493 @@
+:root {
+  --primaryColor: #26266d;
+  --secondaryColor: #ffffff;
+  --backgroundColor: #ffffff;
+  --labelColor: #2f2f2f;
+  --borderColor: #c1c2c2;
+  // --background: url("../assets/londonBridge.jpg");
+  --background: url("https://daedayib1baqz.cloudfront.net/sunnyBackground.jpg");
+  --fontFamily: "lato";
+  --dropdownMenuOpacity: 0;
+  --dropdownMenuTransform: translateY(-10px);
+  --dropdownMenuPointerEvents: none;
+  --showGuests: visible;
+  --showAccessible: visible;
+  --showPromoCode: none;
+}
+
+$screenWidth: 1440;
+$screenHeight: 1024;
+
+@function px-to-vh($px) {
+  @return (($px / $screenHeight) * 100) * 1vh;
+}
+
+@function px-to-vw($px) {
+  @return (($px / $screenWidth) * 100) * 1vw;
+}
+
+@function em-to-vh($em) {
+  @return ((($em * 16) / $screenHeight) * 100) * 1vh;
+}
+
+@function em-to-vw($em) {
+  @return ((($em * 16) / $screenWidth) * 100) * 1vw;
+}
+
+.hidden {
+  display: none;
+}
+
+html {
+  overflow: hidden;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownMenu {
+  grid-auto-rows: 1fr;
+  position: absolute;
+  // background-color: var(--secondaryColor);
+  background-color: var(--backgroundColor);
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.1953125vh 0.48828125vh 0 rgba(0, 0, 0, 0.5);
+  opacity: var(--dropdownMenuOpacity);
+  transform: var(--dropdownMenuTransform);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  width: 20.277777778vw;
+  // height: 19.7265625vh;
+}
+
+.dropdown.active > button + .dropdownMenu {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 52;
+}
+
+#header > a > button,
+#loginPageRoot > #header > a > button {
+  color: var(--primaryColor);
+  background-color: var(--backgroundColor);
+  font-weight: 600;
+}
+
+#header > li.cursor-pointer.justify-self-end.grid.grid-rows-1 > div,
+#loginPageRoot
+  > #header
+  > li.cursor-pointer.justify-self-end.grid.grid-rows-1
+  > div {
+  // margin-top: px-to-vh(14);
+  height: max-content;
+  // margin: px-to-vh(14) 0px 0px 0px;
+}
+
+#header,
+#loginPageRoot > #header {
+  // grid-template-columns: 50% auto 5.041667vw fit-content(100%);
+  grid-template-columns: 50% auto fit-content(100%) fit-content(100%);
+  padding-left: 5.902777778vw;
+  // padding-right: 9.097222222vw;
+  padding-right: 5.902777778vw;
+  height: 8.203125vh;
+  color: var(--primaryColor);
+  font-family: var(--fontFamily);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5625vh;
+  line-height: 140%;
+  grid-column-gap: px-to-vw(15);
+  background: white;
+
+  .tenant {
+    grid-template-columns: auto max-content;
+    grid-column-gap: 0.344444444vw;
+
+    .tenantName {
+      // margin-top: 2.5390625vh;
+      // margin-bottom: 2.734375vh;
+      // height: 2.9296875vh;
+      font-size: 2.9296875vh;
+    }
+
+    .headerName {
+      // margin-top: 2.734375vh;
+      // margin-bottom: 2.9296875vh;
+      font-family: var(--fontFamily);
+      font-style: normal;
+      font-weight: 700;
+      font-size: 1.953125vh;
+      // height: 2.5390625vh;
+      color: var(--primaryColor);
+    }
+  }
+
+  .currencyNav {
+    // grid-template-columns: 0.555555556vw 2.430555556vw;
+    // grid-column-gap: 0.277777778vw;
+    display: grid;
+    align-items: center;
+
+    .currencyIcon {
+      margin-top: 2.9619140625vh;
+      margin-bottom: 3.9384765625vh;
+      height: 1.26953125vh;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .currencyLabel {
+      margin-top: 2.5390625vh;
+      margin-bottom: 3.7109375vh;
+      height: 1.953125vh;
+    }
+  }
+
+  .languageNav {
+    // grid-template-columns: 0.925694444vw 1.875vw;
+    // grid-column-gap: 0.23125vw;
+    display: grid;
+    align-items: center;
+
+    .languageIcon {
+      margin-top: 2.9619140625vh;
+      margin-bottom: 3.9384765625vh;
+      height: 1.3017578125vh;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .languageLabel {
+      margin-top: 2.5390625vh;
+      margin-bottom: 3.80859375vh;
+      height: 1.85546875vh;
+    }
+  }
+
+  a {
+    width: fit-content;
+    display: grid;
+    align-items: center;
+  }
+}
+
+main {
+  height: 66.30859375vh;
+  height: 100vh;
+  background-image: var(--background);
+  background-size: 100vw 91.796875vh;
+  
+  .mainSearch {
+    // height: 57.12890625vh;
+    height: 42.128906vh;
+    width: 26.388888889vw;
+    margin-top: 5.46875vh;
+    margin-left: 5.416666667vw;
+    border-radius: 0.48828125vh;
+    background: var(--backgroundColor);
+
+    .mainSearchForm {
+      margin-top: 4.4921875vh;
+      margin-left: 2.986111111vw;
+      margin-right: 3.055555556vw;
+      // grid-template-rows: 2.44140625vh 4.6875vh 3.61328125vh 4.6875vh 3.7109375vh 5.338867187vh 4.1015625vh 2.63671875vh 10.9375vh auto;
+      grid-template-rows: 2.44140625vh 4.6875vh 3.61328125vh 4.6875vh 3.7109375vh 5.338867187vh 4.1015625vh 2.63671875vh auto;
+
+      a {
+        z-index: 50;
+      }
+
+      #propertyInputLabel {
+        height: 2.05078125vh;
+        width: 6.388888889vw;
+        margin-bottom: 0.48828125vh;
+
+        font-family: var(--fontFamily);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.3671875vh;
+        line-height: 140%;
+
+        color: var(--labelColor);
+      }
+
+      #propertyInput {
+        margin-left: 0.069444444vw;
+        margin-bottom: 1.07421875vh;
+        height: 4.6875vh;
+        width: 20.277777778vw;
+
+        padding: 1.171875vh 1.5625vh;
+        gap: 1.5625vh;
+        background: var(--backgroundColor);
+
+        border: 0.09765625vh solid var(--borderColor);
+        border-radius: 0.390625vh;
+
+        font-family: var(--fontFamily);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.5625vh;
+        line-height: 140%;
+        color: var(--labelColor);
+      }
+
+      #selectDatesLabel {
+        margin-top: 1.07421875vh;
+        margin-left: 0.069444444vw;
+        height: 2.05078125vh;
+        width: 6.388888889vw;
+
+        font-family: var(--fontFamily);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.3671875vh;
+        line-height: 140%;
+
+        color: var(--labelColor);
+      }
+
+      #selectDatesInput {
+        width: 20.277777778vw;
+        height: 4.6875vh;
+
+        padding: 1.171875vh 1.5625vh;
+        gap: 1.5625vh;
+        background: var(--backgroundColor);
+        border: 0.09765625vh solid var(--borderColor);
+        border-radius: 0.390625vh;
+      }
+
+      .date-Range-Picker {
+        z-index: 1000;
+        opacity: 1;
+        background-color: white;
+        position: relative;
+
+        .rdrDay{
+          font-size: px-to-vw(10);
+          height: px-to-vh(60);
+          font-weight: 600;
+          color: green;
+        }
+        .rdrDefinedRangesWrapper {
+          display: none;
+        }
+
+        .rdrCalenderWrapper {
+          font-size: px-to-vh(20);
+        }
+    
+        .rdrDateDisplayItem {
+          border-radius: px-to-vh(4);
+          box-shadow: 0 px-to-vh(1) px-to-vh(2) 0 rgb(35 57 66 / 21%);
+          border: px-to-vh(2) solid transparent;
+        }
+    
+        .rdrMonthAndYearWrapper {
+          align-items: center;
+          height: px-to-vh(60);
+          padding-top: px-to-vh(10);
+        }
+    
+        .rdrNextPrevButton {
+          width: px-to-vw(24);
+          height: px-to-vh(24);
+          border-radius: px-to-vh(5);
+        }
+    
+        .rdrMonthAndYearPickers select {
+          padding: px-to-vw(10) px-to-vw(30) px-to-vh(10) px-to-vh(10);
+          border-radius: px-to-vh(4);
+        }
+      }
+
+      .roomGuestsLabels {
+        margin-top: 1.26953125vh;
+        margin-left: 0.069444444vw;
+        height: 2.05078125vh;
+
+        font-family: var(--fontFamily);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.3671875vh;
+        line-height: 140%;
+
+        color: var(--labelColor);
+
+        grid-template-columns: 6.388888889vw 6.388888889vw;
+        grid-column-gap: 8.75vw;
+
+        #guestsInputLabel {
+          visibility: var(--showGuests);
+          width: 6.388888889vw;
+          height: 2.05078125vh;
+        }
+
+        #roomsInputLabel {
+          width: 6.388888889vw;
+          height: 2.05078125vh;
+        }
+      }
+
+      .roomGuestsInput {
+        height: 4.6875vh;
+
+        grid-template-columns: 13.888888889vw 5.347222222vw;
+        grid-column-gap: 1.041666667vw;
+
+        #guestsInputLanding {
+          visibility: var(--showGuests);
+          height: 100%;
+          width: 100%;
+          padding: 1.171875vh 1.5625vh;
+          gap: 1.5625vh;
+          background: var(--backgroundColor);
+          border: 0.09765625vh solid var(--borderColor);
+          border-radius: 0.390625vh;
+          grid-template-columns: max-content auto;
+        }
+
+        #roomsInput {
+          padding: 1.171875vh 1.5625vh;
+          gap: 1.5625vh;
+          background: var(--backgroundColor);
+          border: 0.09765625vh solid var(--borderColor);
+          border-radius: 0.390625vh;
+        }
+      }
+
+      .accessibleInputGrid {
+        visibility: var(--showAccessible);
+        margin-left: 0.138888889vw;
+        grid-template-columns: 1.111111111vw 1.0875vw 11.411805556vw;
+        z-index: 0;
+
+        #accessibleInput {
+          height: 1.5625vh;
+          width: 1.111111111vw;
+
+          border: 0.09765625vh solid var(--borderColor);
+          border-radius: 0.09765625vh;
+        }
+
+        #accessibleIcon {
+          height: 1.301757813vh;
+          width: 0.786805556vw;
+          margin-left: 0.300694444vw;
+        }
+
+        #accessibleInputLabel {
+          height: 1.953125vh;
+          width: 11.180555556vw;
+          margin-left: 0.23125vw;
+
+          font-family: var(--fontFamily);
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1.3671875vh;
+          line-height: 140%;
+
+          color: var(--labelColor);
+        }
+      }
+
+      #promoCodeLabel {
+        // visibility: var(--showPromoCode);
+        display: var(--showPromoCode);
+        margin-left: 0.069444444vw;
+        height: 2.05078125vh;
+        width: 15.416666667vw;
+        font-family: var(--fontFamily);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.3671875vh;
+        line-height: 140%;
+
+        color: var(--labelColor);
+      }
+
+      #promoCodeInput {
+        // visibility: var(--showPromoCode);
+        display: var(--showPromoCode);
+        height: 4.6875vh;
+        width: 13.958333333vw;
+
+        border: 0.09765625vh solid var(--borderColor);
+        border-radius: 0.390625vh;
+        z-index: 0;
+      }
+
+      #searchButton {
+        box-sizing: border-box;
+        margin-left: 5.277777778vw;
+        height: 4.296875vh;
+        width: 9.722222222vw;
+        padding: 1.171875vh 1.953125vh;
+        gap: 1.171875vh;
+        background: var(--primaryColor);
+        border-radius: 0.390625vh;
+
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.3671875vh;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: var(--backgroundColor);
+      }
+    }
+  }
+}
+
+#loginPageRoot {
+  height: 100vh;
+  width: 100vw;
+  background-image: var(--background);
+  background-size: 100vw 100vh;
+
+  .loginPageContainer {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    .loginBox {
+      // width: 30vw;
+      background: var(--backgroundColor);
+      display: grid;
+      justify-content: center;
+      grid-auto-rows: min-content;
+      grid-row-gap: 25px;
+      // position: absolute;
+      // top: 33%;
+      padding: px-to-vh(30) px-to-vw(50);
+      border-radius: px-to-vh(7);
+
+      a{
+        text-align: center;
+      }
+    }
+  }
+}
+
+#errorPageRoot{
+  height: 100vh;
+
+  .errorContainer{
+    background: var(--background);
+    height: 100%;
+    text-align: center;
+    color: black;
+    font-family: 'Material Symbols Outlined';
+    font-size: xx-large;
+  }
+}

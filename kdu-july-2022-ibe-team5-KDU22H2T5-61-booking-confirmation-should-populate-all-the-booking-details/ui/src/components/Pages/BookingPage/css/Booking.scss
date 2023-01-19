@@ -1,0 +1,163 @@
+// :root {
+//   --primaryColor: #26266d;
+//   --secondaryColor: #ffffff;
+//   --backgroundColor: #5d5d5d;
+//   --labelColor: #2f2f2f;
+//   --borderColor: #c1c2c2;
+//   // --background: url("../assets/londonBridge.jpg");
+//   // --background: url("https://ibe-t5-static.s3.amazonaws.com/londonBridge.jpg");
+//   --fontFamily: "lato";
+//   --dropdownMenuOpacity: 0;
+//   --dropdownMenuTransform: translateY(-10px);
+//   --dropdownMenuPointerEvents: none;
+//   --showGuests: visible;
+//   --showAccessible: visible;
+//   --showPromoCode: visible;
+// }
+
+$screenWidth: 1440;
+$screenHeight: 1024;
+
+@function px-to-vh($px) {
+  @return (($px / $screenHeight) * 100) * 1vh;
+}
+
+@function px-to-vw($px) {
+  @return (($px / $screenWidth) * 100) * 1vw;
+}
+
+@function em-to-vh($em) {
+  @return ((($em * 16) / $screenHeight) * 100) * 1vh;
+}
+
+@function em-to-vw($em) {
+  @return ((($em * 16) / $screenWidth) * 100) * 1vw;
+}
+
+#bookingPageRoot {
+  overflow-y: scroll;
+  height: 100vh;
+
+  .statusBar {
+    background-color: var(--primaryColor);
+    height: 8.984375vh;
+
+    display: grid;
+    align-items: center;
+    padding-left: px-to-vw(400);
+    padding-right: px-to-vw(400);
+  }
+
+  .checkoutLabel {
+    height: px-to-vh(33);
+    width: px-to-vw(170);
+    font-size: min(px-to-vh(33), px-to-vw(33));
+    font-weight: 500;
+    margin-top: px-to-vh(22);
+    margin-left: px-to-vw(85);
+  }
+
+  .infoFormStyle {
+    grid-template-rows: auto auto auto;
+    margin-left: px-to-vw(85);
+
+    .travellerForm,
+    .billingForm,
+    .paymentForm {
+      padding-bottom: px-to-vh(40);
+      border-bottom: 1px solid #c1c2c2;
+
+      .Form-title {
+        font-weight: 500;
+        margin-top: px-to-vh(17);
+        font-size: min(px-to-vh(24), px-to-vw(24));
+      }
+
+      #inputLabel {
+        display: block;
+
+        span {
+          color: grey;
+        }
+      }
+
+      .inputBox {
+        height: px-to-vh(48);
+        width: px-to-vw(346);
+        border: solid px-to-vh(1) grey;
+      }
+
+      .stateInputBox,
+      .zipInputBox,
+      .expiryInputBox {
+        height: px-to-vh(48);
+        width: px-to-vw(130);
+        border: solid px-to-vh(1) grey;
+      }
+
+      p {
+        color: red;
+      }
+
+      #submitBtn {
+        border: solid px-to-vh(1) black;
+        margin-top: 0.9296875vh;
+        margin-right: 2.90277778vw;
+        height: 5.640625vh;
+        background-color: var(--primaryColor);
+        color: white;
+        padding: px-to-vh(20);
+        border-radius: px-to-vh(5);
+        height: px-to-vh(60);
+        width: px-to-vw(100);
+      }
+
+      #prevBtn {
+        border: solid px-to-vh(1) var(--primaryColor);
+        margin-top: 0.9296875vh;
+        margin-right: 2.90277778vw;
+        height: 5.640625vh;
+        color: var(--primaryColor);
+        padding: px-to-vh(20);
+        border-radius: px-to-vh(5);
+        height: px-to-vh(60);
+        width: px-to-vw(100);
+      }
+    }
+
+    .tcCheckbox {
+      margin-bottom: px-to-vh(113);
+      margin-top: px-to-vh(18);
+
+      .checkbox-wrapper {
+        span {
+          margin-left: px-to-vw(5);
+        }
+      }
+
+      .tc-modal {
+        p {
+          margin-bottom: px-to-vh(10);
+        }
+      }
+    }
+  }
+
+  .timer {
+    background-color: grey;
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+
+    span {
+      color: white;
+    }
+
+    svg {
+      height: px-to-vh(50);
+      display: inline;
+      margin: min(px-to-vh(10), px-to-vw(10));
+      color: white;
+    }
+  }
+}

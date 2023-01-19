@@ -1,0 +1,299 @@
+:root {
+  --detImg: url("https://daedayib1baqz.cloudfront.net/standard_suite_1.jpg");
+}
+
+@media print {
+  div #header .tenant {
+    width: fit-content(100%);
+  }
+  div #header .languageNav, div #header .currencyNav {
+    display: none;
+  }
+  div div .Label {
+    margin-left: 11.4583333333vw;
+    margin-top: 2.44140625vh;
+    margin-right: 11.4583333333vw;
+    grid-template-columns: 68.75vw 8.3333333333vw 8.3333333333vw;
+  }
+  div div .Label .bookingLabel {
+    font-size: 1.6666666667vw;
+    font-family: var(--fontFamily);
+    font-weight: 700;
+    height: 4.39453125vh;
+    width: 33.4722222222vw;
+  }
+  div div .Label .printBtn {
+    display: none;
+    padding: 0.9765625vh;
+    color: blue;
+  }
+  div div .checkOutInfo {
+    border: solid 0.09765625vh gray;
+    margin-left: 11.3194444444vw;
+    margin-right: 11.3194444444vw;
+    border-radius: 0.3472222222vw;
+    height: 100%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  div div .checkOutInfo .roomInfo {
+    grid-template-columns: 63.4027777778vw 13.8888888889vw;
+  }
+  div div .checkOutInfo .roomInfo .roomDetails .detLabel {
+    font-size: 1.5972222222vw;
+    font-family: var(--fontFamily);
+    font-weight: 700;
+    height: 4.39453125vh;
+    width: 33.4722222222vw;
+    margin-left: 1.9444444444vw;
+    margin-top: 2.734375vh;
+    margin-bottom: 2.83203125vh;
+  }
+  div div .checkOutInfo .roomInfo .roomDetails .detInfo {
+    grid-template-columns: 26.1111111111vw auto;
+  }
+  div div .checkOutInfo .roomInfo .roomDetails .detInfo .detInfo-Img {
+    background-color: grey;
+    height: 21.875vh;
+    width: 22.7777777778vw;
+    margin-left: 1.8055555556vw;
+    margin-right: 1.5277777778vw;
+    background-image: var(--detImg);
+    background-size: 100% 100%;
+  }
+  div div .checkOutInfo .roomInfo .roomDetails .detInfo .detInfo-desc {
+    grid-template-rows: 11.03515625vh auto;
+  }
+  div div .checkOutInfo .roomInfo .roomDetails .detInfo .detInfo-desc .dateBoxes {
+    display: grid;
+    grid-template-columns: 7.7777777778vw auto;
+  }
+  div div .checkOutInfo .roomInfo .roomDetails .detInfo .detInfo-desc .dateBoxes .dateBox {
+    border: solid 0.09765625vh gray;
+    height: 10.3515625vh;
+    width: 7.2916666667vw;
+    border-radius: 0.3472222222vw;
+    align-items: center;
+  }
+  div div .checkOutInfo .roomInfo .roomDetails .detInfo .detInfo-desc .dateBoxes .dateBox .checkDate {
+    color: grey;
+    text-align: center;
+  }
+  div div .checkOutInfo .roomInfo .roomDetails .detInfo .detInfo-desc .dateBoxes .dateBox .date {
+    text-align: center;
+    font-family: var(--fontFamily);
+    font-weight: 700;
+  }
+  div div .checkOutInfo .roomInfo .roomDetails .detInfo .detInfo-desc .dateBoxes .dateBox .year {
+    text-align: center;
+    font-family: var(--fontFamily);
+    font-weight: 400;
+  }
+  div div .checkOutInfo .roomInfo .roomDetails .detInfo .detInfo-desc .infoBox {
+    height: 12.890625vh;
+    width: 30.625vw;
+  }
+  div div .checkOutInfo .roomInfo .roomDetails .detInfo .detInfo-desc .infoBox .infoBox-label {
+    font-size: 1.3888888889vw;
+    font-family: var(--fontFamily);
+    font-weight: 700;
+    height: 3.61328125vh;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  div div .checkOutInfo .roomInfo .roomDetails .detInfo .detInfo-desc .infoBox .infoBox-content {
+    color: grey;
+    font-size: 1.1111111111vw;
+    font-family: var(--fontFamily);
+    font-weight: 400;
+  }
+  div div .checkOutInfo .roomInfo .sideBtns {
+    display: none;
+    margin-right: 0.9722222222vw;
+    margin-left: auto;
+    margin-top: 2.83203125vh;
+  }
+  div div .checkOutInfo .roomInfo .sideBtns .roomBtn {
+    border: solid 0.09765625vh black;
+    background-color: var(--primaryColor);
+    color: white;
+    padding: auto;
+    border-radius: 0.48828125vh;
+    height: 5.859375vh;
+    width: 10.4166666667vw;
+  }
+  div div .checkOutInfo .roomInfo .sideBtns .cancelBtn {
+    color: blue;
+  }
+  div div .checkOutInfo .accordian-label {
+    color: var(--primaryColor);
+    font-family: var(--fontFamily);
+    font-weight: 700;
+    font-size: 1.1111111111vw;
+    margin-left: 3.0555555556vw;
+  }
+  div div .checkOutInfo .accordian {
+    grid-template-columns: 65.9722222222vw 10.4166666667vw;
+  }
+  div div .checkOutInfo .accordian .accordian-details {
+    margin-left: 4.4444444444vw;
+  }
+  div div .checkOutInfo .accordian .accordian-details span {
+    color: gray;
+    font-family: var(--fontFamily);
+    font-weight: 400;
+    font-size: 1.1111111111vw;
+  }
+  div div .checkOutInfo .accordian .accordian-value span {
+    font-family: var(--fontFamily);
+    font-weight: 400;
+    font-size: 1.3888888889vw;
+  }
+}
+#CheckOut {
+  overflow-y: scroll;
+  height: 100vh;
+}
+#CheckOut div div .Label {
+  margin-left: 11.4583333333vw;
+  margin-top: 0.48828125vh;
+  margin-bottom: 1.26953125vh;
+  margin-right: 11.4583333333vw;
+  grid-template-columns: 68.75vw 8.3333333333vw 8.3333333333vw;
+}
+#CheckOut div div .Label .bookingLabel {
+  font-size: 1.6666666667vw;
+  font-family: var(--fontFamily);
+  font-weight: 700;
+  height: 4.39453125vh;
+  width: 33.4722222222vw;
+}
+#CheckOut div div .Label .printBtn {
+  padding: 0.9765625vh;
+  color: blue;
+}
+#CheckOut div div .checkOutInfo {
+  border: solid 0.09765625vh gray;
+  margin-left: 11.3194444444vw;
+  margin-right: 11.3194444444vw;
+  border-radius: 0.3472222222vw;
+  height: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#CheckOut div div .checkOutInfo .roomInfo {
+  grid-template-columns: 63.4027777778vw 13.8888888889vw;
+}
+#CheckOut div div .checkOutInfo .roomInfo .roomDetails .detLabel {
+  font-size: 1.5972222222vw;
+  font-family: var(--fontFamily);
+  font-weight: 700;
+  height: 4.39453125vh;
+  width: 33.4722222222vw;
+  margin-left: 1.9444444444vw;
+  margin-top: 2.734375vh;
+  margin-bottom: 2.83203125vh;
+}
+#CheckOut div div .checkOutInfo .roomInfo .roomDetails .detInfo {
+  grid-template-columns: 26.1111111111vw auto;
+}
+#CheckOut div div .checkOutInfo .roomInfo .roomDetails .detInfo .detInfo-Img {
+  background-color: grey;
+  height: 21.875vh;
+  width: 22.7777777778vw;
+  margin-left: 1.8055555556vw;
+  margin-right: 1.5277777778vw;
+  background-image: var(--detImg);
+  background-size: 100% 100%;
+}
+#CheckOut div div .checkOutInfo .roomInfo .roomDetails .detInfo .detInfo-desc {
+  grid-template-rows: 11.03515625vh auto;
+}
+#CheckOut div div .checkOutInfo .roomInfo .roomDetails .detInfo .detInfo-desc .dateBoxes {
+  display: grid;
+  grid-template-columns: 7.7777777778vw auto;
+}
+#CheckOut div div .checkOutInfo .roomInfo .roomDetails .detInfo .detInfo-desc .dateBoxes .dateBox {
+  border: solid 0.09765625vh gray;
+  height: 10.3515625vh;
+  width: 7.2916666667vw;
+  border-radius: 0.3472222222vw;
+  align-items: center;
+}
+#CheckOut div div .checkOutInfo .roomInfo .roomDetails .detInfo .detInfo-desc .dateBoxes .dateBox .checkDate {
+  color: grey;
+  text-align: center;
+}
+#CheckOut div div .checkOutInfo .roomInfo .roomDetails .detInfo .detInfo-desc .dateBoxes .dateBox .date {
+  text-align: center;
+  font-family: var(--fontFamily);
+  font-weight: 700;
+}
+#CheckOut div div .checkOutInfo .roomInfo .roomDetails .detInfo .detInfo-desc .dateBoxes .dateBox .year {
+  text-align: center;
+  font-family: var(--fontFamily);
+  font-weight: 400;
+}
+#CheckOut div div .checkOutInfo .roomInfo .roomDetails .detInfo .detInfo-desc .infoBox {
+  height: 12.890625vh;
+  width: 30.625vw;
+}
+#CheckOut div div .checkOutInfo .roomInfo .roomDetails .detInfo .detInfo-desc .infoBox .infoBox-label {
+  font-size: 1.3888888889vw;
+  font-family: var(--fontFamily);
+  font-weight: 700;
+  height: 3.61328125vh;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#CheckOut div div .checkOutInfo .roomInfo .roomDetails .detInfo .detInfo-desc .infoBox .infoBox-content {
+  color: grey;
+  font-size: 1.1111111111vw;
+  font-family: var(--fontFamily);
+  font-weight: 400;
+}
+#CheckOut div div .checkOutInfo .roomInfo .sideBtns {
+  margin-right: 0.9722222222vw;
+  margin-left: auto;
+  margin-top: 2.83203125vh;
+}
+#CheckOut div div .checkOutInfo .roomInfo .sideBtns .roomBtn {
+  border: solid 0.09765625vh black;
+  background-color: var(--primaryColor);
+  color: white;
+  padding: auto;
+  border-radius: 0.48828125vh;
+  height: 5.859375vh;
+  width: 10.4166666667vw;
+}
+#CheckOut div div .checkOutInfo .roomInfo .sideBtns .cancelBtn {
+  color: blue;
+}
+#CheckOut div div .checkOutInfo .accordian-label {
+  color: var(--primaryColor);
+  font-family: var(--fontFamily);
+  font-weight: 700;
+  font-size: 1.1111111111vw;
+  margin-left: 3.0555555556vw;
+}
+#CheckOut div div .checkOutInfo .accordian {
+  grid-template-columns: 59.0277777778vw auto;
+}
+#CheckOut div div .checkOutInfo .accordian .accordian-details {
+  margin-left: 4.4444444444vw;
+}
+#CheckOut div div .checkOutInfo .accordian .accordian-details span {
+  color: gray;
+  font-family: var(--fontFamily);
+  font-weight: 400;
+  font-size: 1.1111111111vw;
+}
+#CheckOut div div .checkOutInfo .accordian .accordian-value span {
+  font-family: var(--fontFamily);
+  font-weight: 400;
+  font-size: 1.3888888889vw;
+}/*# sourceMappingURL=Confirmation.css.map */

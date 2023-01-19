@@ -1,0 +1,25 @@
+FROM openjdk:11
+ARG DB_HOST
+ARG DB_USERNAME
+ARG DB_PASSWORD
+ARG APPSYNC_API_KEY
+ARG APPSYNC_BASE_URL
+ARG EMAILJS_API_KEY
+ARG EMAILJS_SERVICE_ID
+ARG EMAILJS_TEMPLATE_ID
+ARG EMAILJS_TEMPLATE_ID_OTP
+ARG EMAILJS_ACCESS_TOKEN
+ENV PROFILE "production"
+ENV URL "jdbc:mysql://${DB_HOST}:3306/ibe"
+ENV USERNAME "${DB_USERNAME}"
+ENV PASSWORD "${DB_PASSWORD}"
+ENV APPSYNC_BASE_URL "${APPSYNC_BASE_URL}"
+ENV APPSYNC_API_KEY "${APPSYNC_API_KEY}"
+ENV EMAILJS_API_KEY "${EMAILJS_API_KEY}"
+ENV EMAILJS_SERVICE_ID "${EMAILJS_SERVICE_ID}"
+ENV EMAILJS_TEMPLATE_ID "${EMAILJS_TEMPLATE_ID}"
+ENV EMAILJS_TEMPLATE_ID_OTP "${EMAILJS_TEMPLATE_ID_OTP}"
+ENV EMAILJS_ACCESS_TOKEN "${EMAILJS_ACCESS_TOKEN}"
+EXPOSE 8080
+ADD target/ibe-0.0.1-SNAPSHOT.jar ibe-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java","-jar","/ibe-0.0.1-SNAPSHOT.jar","--spring.profiles.active=${PROFILE}","--spring.datasource.url=${URL}","--spring.datasource.username=${USERNAME}","--spring.datasource.password=${PASSWORD}","--cloud.aws.appsync.emailjs-user_id=${EMAILJS_API_KEY}","--cloud.aws.appsync.emailjs-service_id=${EMAILJS_SERVICE_ID}","--cloud.aws.appsync.emailjs-template_id=${EMAILJS_TEMPLATE_ID}","--cloud.aws.appsync.emailjs-template_id_otp=${EMAILJS_TEMPLATE_ID_OTP}","--cloud.aws.appsync.emailjs-accessToken=${EMAILJS_ACCESS_TOKEN}","--cloud.aws.appsync.base-url=${APPSYNC_BASE_URL}","--cloud.aws.appsync.api-key=${APPSYNC_API_KEY}"]

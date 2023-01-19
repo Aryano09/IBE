@@ -1,0 +1,251 @@
+$screenWidth: 1440;
+$screenHeight: 1024;
+
+@function px-to-vh($px) {
+  @return (($px / $screenHeight) * 100) * 1vh;
+}
+
+@function px-to-vw($px) {
+  @return (($px / $screenWidth) * 100) * 1vw;
+}
+
+@function em-to-vh($em) {
+  @return ((($em * 16) / $screenHeight) * 100) * 1vh;
+}
+
+@function em-to-vw($em) {
+  @return ((($em * 16) / $screenWidth) * 100) * 1vw;
+}
+
+#tripItenary {
+  .dateGuests,
+  .roomType,
+  .roomRate,
+  .roomCount,
+  .specialPromo,
+  .taxName,
+  .amountName,
+  .continueButton button {
+    width: max-content;
+    height: fit-content(100%);
+
+    font-family: "lato";
+    font-style: normal;
+    font-weight: 400;
+    font-size: min(px-to-vh(16), px-to-vw(16));
+    line-height: 140%;
+    color: #5d5d5d;
+  }
+
+  .informationIconContainer {
+    position: absolute;
+    top: 0;
+    right: -1 * px-to-vh(20);
+
+    width: px-to-vw(13.33);
+    height: px-to-vh(13.33);
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  .css-1e6y48t-MuiButtonBase-root-MuiButton-root{
+    max-width: 100%;
+    min-width: 100%;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
+  }
+
+  .itenaryContainer {
+    height: fit-content(100%);
+    // width: px-to-vw(400);
+    width: max-content;
+    background: #eff0f1;
+
+    .removeButtonContainer {
+      top: px-to-vh(28);
+      right: px-to-vw(24);
+
+      button {
+        font-family: "lato";
+        font-style: normal;
+        font-weight: 400;
+        font-size: min(px-to-vh(16), px-to-vw(16));
+        line-height: px-to-vh(19);
+        // text-align: center;
+        color: #006eff;
+      }
+    }
+
+    .itenaryContent {
+      height: 100%;
+      width: 100%;
+      grid-template-rows:
+        px-to-vh(17 + 33) fit-content(100%) px-to-vh(109) px-to-vh(61)
+        px-to-vh(94);
+
+      .heading {
+        width: px-to-vw(15 + 212);
+        padding-top: px-to-vh(17);
+        padding-left: px-to-vw(15);
+
+        font-family: "lato";
+        font-style: normal;
+        font-weight: 700;
+        font-size: min(px-to-vh(24), px-to-vw(24));
+        line-height: 140%;
+        // text-align: center;
+
+        color: #000000;
+      }
+
+      .tripDetailsContainer {
+        margin-left: px-to-vw(24);
+        margin-top: px-to-vh(17);
+        margin-right: px-to-vw(35.5);
+        border-bottom: 1px solid #5d5d5d;
+
+        .tripDetails {
+          grid-template-rows:
+            px-to-vh(27) px-to-vh(25) px-to-vh(22) px-to-vh(22)
+            px-to-vh(22);
+
+          .propertyName {
+            width: max-content;
+            margin-bottom: px-to-vh(2);
+
+            font-family: "lato";
+            font-style: normal;
+            font-weight: 700;
+            font-size: min(px-to-vh(20), px-to-vw(20));
+            line-height: 130%;
+          }
+
+          .roomType {
+            margin-bottom: px-to-vh(2);
+          }
+
+          .roomRate {
+            margin-bottom: px-to-vh(3);
+          }
+
+          .roomCount {
+            margin-bottom: px-to-vh(5);
+          }
+
+          .specialPromo {
+            margin-bottom: px-to-vh(17);
+            position: relative;
+          }
+        }
+      }
+
+      .taxDetailsContainer {
+        margin-left: px-to-vw(24);
+        margin-right: px-to-vw(35.5);
+        border-bottom: 1px solid #5d5d5d;
+
+        .taxNameContainer {
+          width: max-content;
+          height: px-to-vh(78);
+          top: px-to-vh(16);
+          grid-row-gap: px-to-vh(12);
+
+          .taxName {
+            width: max-content;
+            height: px-to-vh(18);
+          }
+        }
+
+        .taxAmountContainer {
+          width: max-content;
+          height: px-to-vh(88);
+          top: px-to-vh(12);
+          right: px-to-vw(0);
+          grid-row-gap: px-to-vh(2);
+
+          .taxAmount {
+            width: max-content;
+            height: px-to-vh(28);
+            font-family: "lato";
+            font-style: normal;
+            font-weight: 400;
+            font-size: min(px-to-vh(20), px-to-vw(20));
+            line-height: 140%;
+            color: #2f2f2f;
+          }
+        }
+      }
+
+      .dueAmountsContainer {
+        margin-left: px-to-vw(24);
+        margin-right: px-to-vw(35.5);
+
+        .amountNameContainer {
+          top: px-to-vh(7);
+          width: max-content;
+          height: px-to-vh(48);
+          grid-row-gap: px-to-vh(12);
+
+          .amountName {
+            width: max-content;
+            height: px-to-vh(18);
+          }
+        }
+
+        .dueAmountContainer {
+          top: px-to-vh(3);
+          right: px-to-vw(0);
+          width: max-content;
+          height: px-to-vh(58);
+          grid-row-gap: px-to-vh(2);
+
+          .dueAmount {
+            width: max-content;
+            height: px-to-vh(28);
+
+            font-family: "lato";
+            font-style: normal;
+            font-weight: 400;
+            font-size: min(px-to-vh(20), px-to-vw(20));
+            line-height: 140%;
+          }
+        }
+      }
+
+      .continueButtonContainer {
+        .continueButton {
+          bottom: px-to-vh(23);
+          left: px-to-vw(100);
+          width: max-content;
+          height: fit-content(100%);
+          font-family: "Lato";
+          font-style: normal;
+          font-weight: 700;
+          font-size: min(px-to-vh(14), px-to-vw(14));
+          line-height: 140%;
+          letter-spacing: 0.02em;
+          text-transform: uppercase;
+          color: #26266d;
+          padding: px-to-vh(12) px-to-vw(26.5);
+          // background: #26266d;
+          background: var(--primaryColor);
+          border-radius: 4px;
+
+          button {
+            width: max-content;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}

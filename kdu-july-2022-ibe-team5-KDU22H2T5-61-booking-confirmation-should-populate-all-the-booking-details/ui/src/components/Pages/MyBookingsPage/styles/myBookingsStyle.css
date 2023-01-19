@@ -1,0 +1,22 @@
+#myBookingsRoot {
+  height: 100vh;
+  overflow-y: auto;
+  width: 100vw;
+  background-image: var(--background);
+  background-size: 100vw 100vh;
+}
+#myBookingsRoot .myBookingsContainer {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 50vw;
+}
+#myBookingsRoot .myBookingsContainer .myBookingsBox {
+  background: var(--backgroundColor);
+  display: grid;
+  grid-auto-rows: -webkit-min-content;
+  grid-auto-rows: min-content;
+  padding: px-to-vh(30) px-to-vw(50);
+  border-radius: px-to-vh(7);
+  margin: 10vh;
+}/*# sourceMappingURL=myBookingsStyle.css.map */

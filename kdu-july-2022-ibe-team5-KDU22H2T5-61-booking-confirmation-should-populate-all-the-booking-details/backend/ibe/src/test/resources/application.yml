@@ -1,0 +1,28 @@
+spring:
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+  datasource:
+    url: jdbc:h2:mem:ibe
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 1
+    jpa:
+      hibernate:
+        ddl-auto: create-drop
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.H2Dialect
+
+cloud:
+  aws:
+    appsync:
+      base-url: base
+      api-key: key
+      emailjs-url: https://api.emailjs.com/api/v1.0/email/send
+      emailjs-lib_version: 3.7.0
+      emailjs-user_id: uid
+      emailjs-service_id: sid
+      emailjs-template_id: tid
+      emailjs-accessToken: at
+      emailjs-template_id_otp: tidotp

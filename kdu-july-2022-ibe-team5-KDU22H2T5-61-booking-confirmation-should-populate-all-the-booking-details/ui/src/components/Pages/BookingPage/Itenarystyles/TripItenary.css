@@ -1,0 +1,213 @@
+#tripItenary .dateGuests,
+#tripItenary .roomType,
+#tripItenary .roomRate,
+#tripItenary .roomCount,
+#tripItenary .specialPromo,
+#tripItenary .taxName,
+#tripItenary .amountName,
+#tripItenary .continueButton button {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: fit-content(100%);
+  font-family: "lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: min(1.5625vh, 1.1111111111vw);
+  line-height: 140%;
+  color: #5d5d5d;
+}
+#tripItenary .informationIconContainer {
+  position: absolute;
+  top: 0;
+  right: -1.953125vh;
+  width: 0.9256944444vw;
+  height: 1.3017578125vh;
+}
+#tripItenary .informationIconContainer img {
+  max-width: 100%;
+  max-height: 100%;
+}
+#tripItenary .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+  max-width: 100%;
+  min-width: 100%;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+#tripItenary .itenaryContainer {
+  height: fit-content(100%);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background: #eff0f1;
+}
+#tripItenary .itenaryContainer .removeButtonContainer {
+  top: 2.734375vh;
+  right: 1.6666666667vw;
+}
+#tripItenary .itenaryContainer .removeButtonContainer button {
+  font-family: "lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: min(1.5625vh, 1.1111111111vw);
+  line-height: 1.85546875vh;
+  color: #006eff;
+}
+#tripItenary .itenaryContainer .itenaryContent {
+  height: 100%;
+  width: 100%;
+  grid-template-rows: 4.8828125vh fit-content(100%) 10.64453125vh 5.95703125vh 9.1796875vh;
+}
+#tripItenary .itenaryContainer .itenaryContent .heading {
+  width: 15.7638888889vw;
+  padding-top: 1.66015625vh;
+  padding-left: 1.0416666667vw;
+  font-family: "lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: min(2.34375vh, 1.6666666667vw);
+  line-height: 140%;
+  color: #000000;
+}
+#tripItenary .itenaryContainer .itenaryContent .tripDetailsContainer {
+  margin-left: 1.6666666667vw;
+  margin-top: 1.66015625vh;
+  margin-right: 2.4652777778vw;
+  border-bottom: 1px solid #5d5d5d;
+}
+#tripItenary .itenaryContainer .itenaryContent .tripDetailsContainer .tripDetails {
+  grid-template-rows: 2.63671875vh 2.44140625vh 2.1484375vh 2.1484375vh 2.1484375vh;
+}
+#tripItenary .itenaryContainer .itenaryContent .tripDetailsContainer .tripDetails .propertyName {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-bottom: 0.1953125vh;
+  font-family: "lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: min(1.953125vh, 1.3888888889vw);
+  line-height: 130%;
+}
+#tripItenary .itenaryContainer .itenaryContent .tripDetailsContainer .tripDetails .roomType {
+  margin-bottom: 0.1953125vh;
+}
+#tripItenary .itenaryContainer .itenaryContent .tripDetailsContainer .tripDetails .roomRate {
+  margin-bottom: 0.29296875vh;
+}
+#tripItenary .itenaryContainer .itenaryContent .tripDetailsContainer .tripDetails .roomCount {
+  margin-bottom: 0.48828125vh;
+}
+#tripItenary .itenaryContainer .itenaryContent .tripDetailsContainer .tripDetails .specialPromo {
+  margin-bottom: 1.66015625vh;
+  position: relative;
+}
+#tripItenary .itenaryContainer .itenaryContent .taxDetailsContainer {
+  margin-left: 1.6666666667vw;
+  margin-right: 2.4652777778vw;
+  border-bottom: 1px solid #5d5d5d;
+}
+#tripItenary .itenaryContainer .itenaryContent .taxDetailsContainer .taxNameContainer {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 7.6171875vh;
+  top: 1.5625vh;
+  grid-row-gap: 1.171875vh;
+}
+#tripItenary .itenaryContainer .itenaryContent .taxDetailsContainer .taxNameContainer .taxName {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 1.7578125vh;
+}
+#tripItenary .itenaryContainer .itenaryContent .taxDetailsContainer .taxAmountContainer {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 8.59375vh;
+  top: 1.171875vh;
+  right: 0vw;
+  grid-row-gap: 0.1953125vh;
+}
+#tripItenary .itenaryContainer .itenaryContent .taxDetailsContainer .taxAmountContainer .taxAmount {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 2.734375vh;
+  font-family: "lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: min(1.953125vh, 1.3888888889vw);
+  line-height: 140%;
+  color: #2f2f2f;
+}
+#tripItenary .itenaryContainer .itenaryContent .dueAmountsContainer {
+  margin-left: 1.6666666667vw;
+  margin-right: 2.4652777778vw;
+}
+#tripItenary .itenaryContainer .itenaryContent .dueAmountsContainer .amountNameContainer {
+  top: 0.68359375vh;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 4.6875vh;
+  grid-row-gap: 1.171875vh;
+}
+#tripItenary .itenaryContainer .itenaryContent .dueAmountsContainer .amountNameContainer .amountName {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 1.7578125vh;
+}
+#tripItenary .itenaryContainer .itenaryContent .dueAmountsContainer .dueAmountContainer {
+  top: 0.29296875vh;
+  right: 0vw;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 5.6640625vh;
+  grid-row-gap: 0.1953125vh;
+}
+#tripItenary .itenaryContainer .itenaryContent .dueAmountsContainer .dueAmountContainer .dueAmount {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 2.734375vh;
+  font-family: "lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: min(1.953125vh, 1.3888888889vw);
+  line-height: 140%;
+}
+#tripItenary .itenaryContainer .itenaryContent .continueButtonContainer .continueButton {
+  bottom: 2.24609375vh;
+  left: 6.9444444444vw;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: fit-content(100%);
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: min(1.3671875vh, 0.9722222222vw);
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #26266d;
+  padding: 1.171875vh 1.8402777778vw;
+  background: var(--primaryColor);
+  border-radius: 4px;
+}
+#tripItenary .itenaryContainer .itenaryContent .continueButtonContainer .continueButton button {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #ffffff;
+}/*# sourceMappingURL=TripItenary.css.map */

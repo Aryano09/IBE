@@ -1,0 +1,124 @@
+#bookingPageRoot {
+  overflow-y: scroll;
+  height: 100vh;
+}
+#bookingPageRoot .statusBar {
+  background-color: var(--primaryColor);
+  height: 8.984375vh;
+  display: grid;
+  align-items: center;
+  padding-left: 27.7777777778vw;
+  padding-right: 27.7777777778vw;
+}
+#bookingPageRoot .checkoutLabel {
+  height: 3.22265625vh;
+  width: 11.8055555556vw;
+  font-size: min(3.22265625vh, 2.2916666667vw);
+  font-weight: 500;
+  margin-top: 2.1484375vh;
+  margin-left: 5.9027777778vw;
+}
+#bookingPageRoot .infoFormStyle {
+  grid-template-rows: auto auto auto;
+  margin-left: 5.9027777778vw;
+}
+#bookingPageRoot .infoFormStyle .travellerForm,
+#bookingPageRoot .infoFormStyle .billingForm,
+#bookingPageRoot .infoFormStyle .paymentForm {
+  padding-bottom: 3.90625vh;
+  border-bottom: 1px solid #c1c2c2;
+}
+#bookingPageRoot .infoFormStyle .travellerForm .Form-title,
+#bookingPageRoot .infoFormStyle .billingForm .Form-title,
+#bookingPageRoot .infoFormStyle .paymentForm .Form-title {
+  font-weight: 500;
+  margin-top: 1.66015625vh;
+  font-size: min(2.34375vh, 1.6666666667vw);
+}
+#bookingPageRoot .infoFormStyle .travellerForm #inputLabel,
+#bookingPageRoot .infoFormStyle .billingForm #inputLabel,
+#bookingPageRoot .infoFormStyle .paymentForm #inputLabel {
+  display: block;
+}
+#bookingPageRoot .infoFormStyle .travellerForm #inputLabel span,
+#bookingPageRoot .infoFormStyle .billingForm #inputLabel span,
+#bookingPageRoot .infoFormStyle .paymentForm #inputLabel span {
+  color: grey;
+}
+#bookingPageRoot .infoFormStyle .travellerForm .inputBox,
+#bookingPageRoot .infoFormStyle .billingForm .inputBox,
+#bookingPageRoot .infoFormStyle .paymentForm .inputBox {
+  height: 4.6875vh;
+  width: 24.0277777778vw;
+  border: solid 0.09765625vh grey;
+}
+#bookingPageRoot .infoFormStyle .travellerForm .stateInputBox,
+#bookingPageRoot .infoFormStyle .travellerForm .zipInputBox,
+#bookingPageRoot .infoFormStyle .travellerForm .expiryInputBox,
+#bookingPageRoot .infoFormStyle .billingForm .stateInputBox,
+#bookingPageRoot .infoFormStyle .billingForm .zipInputBox,
+#bookingPageRoot .infoFormStyle .billingForm .expiryInputBox,
+#bookingPageRoot .infoFormStyle .paymentForm .stateInputBox,
+#bookingPageRoot .infoFormStyle .paymentForm .zipInputBox,
+#bookingPageRoot .infoFormStyle .paymentForm .expiryInputBox {
+  height: 4.6875vh;
+  width: 9.0277777778vw;
+  border: solid 0.09765625vh grey;
+}
+#bookingPageRoot .infoFormStyle .travellerForm p,
+#bookingPageRoot .infoFormStyle .billingForm p,
+#bookingPageRoot .infoFormStyle .paymentForm p {
+  color: red;
+}
+#bookingPageRoot .infoFormStyle .travellerForm #submitBtn,
+#bookingPageRoot .infoFormStyle .billingForm #submitBtn,
+#bookingPageRoot .infoFormStyle .paymentForm #submitBtn {
+  border: solid 0.09765625vh black;
+  margin-top: 0.9296875vh;
+  margin-right: 2.90277778vw;
+  height: 5.640625vh;
+  background-color: var(--primaryColor);
+  color: white;
+  padding: 1.953125vh;
+  border-radius: 0.48828125vh;
+  height: 5.859375vh;
+  width: 6.9444444444vw;
+}
+#bookingPageRoot .infoFormStyle .travellerForm #prevBtn,
+#bookingPageRoot .infoFormStyle .billingForm #prevBtn,
+#bookingPageRoot .infoFormStyle .paymentForm #prevBtn {
+  border: solid 0.09765625vh var(--primaryColor);
+  margin-top: 0.9296875vh;
+  margin-right: 2.90277778vw;
+  height: 5.640625vh;
+  color: var(--primaryColor);
+  padding: 1.953125vh;
+  border-radius: 0.48828125vh;
+  height: 5.859375vh;
+  width: 6.9444444444vw;
+}
+#bookingPageRoot .infoFormStyle .tcCheckbox {
+  margin-bottom: 11.03515625vh;
+  margin-top: 1.7578125vh;
+}
+#bookingPageRoot .infoFormStyle .tcCheckbox .checkbox-wrapper span {
+  margin-left: 0.3472222222vw;
+}
+#bookingPageRoot .infoFormStyle .tcCheckbox .tc-modal p {
+  margin-bottom: 0.9765625vh;
+}
+#bookingPageRoot .timer {
+  background-color: grey;
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+}
+#bookingPageRoot .timer span {
+  color: white;
+}
+#bookingPageRoot .timer svg {
+  height: 4.8828125vh;
+  display: inline;
+  margin: min(0.9765625vh, 0.6944444444vw);
+  color: white;
+}/*# sourceMappingURL=Booking.css.map */

@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-ibet5-dev-171855-authRole",
+      "UnauthRoleArn": "arn:aws:iam::150386260201:role/amplify-ibet5-dev-171855-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::150386260201:role/amplify-ibet5-dev-171855-authRole",
+      "Region": "eu-west-3",
+      "DeploymentBucketName": "amplify-ibet5-dev-171855-deployment",
+      "UnauthRoleName": "amplify-ibet5-dev-171855-unauthRole",
+      "StackName": "amplify-ibet5-dev-171855",
+      "StackId": "arn:aws:cloudformation:eu-west-3:150386260201:stack/amplify-ibet5-dev-171855/60804070-3e5a-11ed-bce8-062b40f432fc",
+      "AmplifyAppId": "dusfpck2dhke9"
+    },
+    "categories": {
+      "auth": {
+        "ibet5fb0d3f59": {}
+      }
+    }
+  }
+}
